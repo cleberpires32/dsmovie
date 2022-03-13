@@ -1,5 +1,4 @@
 
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 import {ReactComponent as Arrow} from 'asserts/img/arrow.svg';
 import { MoviePage } from 'types/movies';
 import './style.css'

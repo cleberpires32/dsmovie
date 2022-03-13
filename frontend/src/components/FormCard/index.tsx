@@ -15,10 +15,13 @@ function FormCard({movieId} : Props) {
 
     const navigate = useNavigate();
 
-    const[movie, setMovie] = useState<Movie>();
+    const[movie,setMovie] = useState<Movie>();
 
     useEffect(()=>{
         axios.get(`${BASE_URL}/movies/${movieId}`)
+        .then(response => 
+            {setMovie(response.data);
+        });
     },[movieId]);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>)=>{
